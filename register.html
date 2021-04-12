@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Template</title>
+    <script src="https://kit.fontawesome.com/a570ceb9bc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <!-- NAVBAR SECTION -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" id="Nav-Logo"><i class="fas fa-bullseye"></i>LOGO</a>
+            <div class="nav-toggle " id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-Links">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-Links">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                    <a href="products.html" class="nav-Links">PRODUCTS</a>
+                </li>
+                <li class="nav-btn">
+                        <a href="Register.html" class="button" target="#">
+                        REGISTER
+                        </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- REGISTRATION SECTION -->
+    <section class="register-container">
+        <div class="container">
+            <div class="header">
+                <h2>Contact us</h2>
+            </div>
+            <form  method="POST" class="form" id="form" >
+                <div class="form-control">
+                    <label for="username">Username</label>
+                    <input type="text" placeholder="My name is:" id="username" />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+                <div class="form-control">
+                    <label for="Email">Email</label>
+                    <input type="email" placeholder="example@email.com" id="email" />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+                <div class="form-control">
+                    <label for="message">Message</label> <br>
+                    <textarea  placeholder="What would you like to tell us?" id="message" cols="30" rows="10"></textarea>
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+                <!-- <div class="form-control">
+                    <label for="username">Password</label>
+                    <input type="password" placeholder="Password" id="password"/>
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+                <div class="form-control">
+                    <label for="username">Password check</label>
+                    <input type="password" placeholder="Password confirm" id="password2"/>
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div> -->
+                <button class="main-btn">Submit</button>
+            </form>
+        </div>
+    </section>
+        <!-- FOOTER -->
+        <section class="footer">
+            <div class="footer-links">
+                <div class="footer-links-wrapper">
+                    <div class="footer-links-item">
+                        <h2>LINKS</h2>
+                        <a href="about.html">About</a>
+                        <a href="products.html">Products</a>
+                        <a href="register.html">Register</a>
+                    </div>
+                    <div class="footer-links-item">
+                        <h2>INFORMATION</h2>
+                        <a href="register.html">ContactUS</a>
+                        <a href="index.html">Terms of use</a>
+                        <a href="index.html">Careers</a>
+                        <a href="index.html">Investments</a>
+                    </div>
+                    <div class="footer-links-item">
+                        <h2>SOCIAL</h2>
+                        <a href="https://Facebook.com" target="_">Facebook</a>
+                        <a href="https://Instagram.com" target="_">Instagram</a>
+                        <a href="https://twitter.com" target="_">twitter</a>
+                        <a href="https://youtube.com" target="_">Youtube</a>
+                        <a href="https://github.com" target="_">Github</a>
+                    </div>
+                </div>
+            </div>
+            <div class="social-media">
+                <div class="social-media-wrap">
+                    <div class="footer-logo">
+                        <a href="index.html" id="footer-logo">
+                        <i class="fas fa-bullseye"></i> LOGO
+                        </a>
+                        <p class="rights">© All rights reserved 2021 </p>
+                    </div>
+                    <!-- hold alt and type 0169 to get the copyright symbol -->
+                    
+                    <div class="icons">
+                        <a href="https://Facebook.com" target="_" class="icon-link" >
+                        <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://Instagram.com" target="_" class="icon-link" >
+                        <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_" class="icon-link" >
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.6/firebase.js"></script>
+<script src="register.js"></script>
+</body>
+</html>
