@@ -5,7 +5,7 @@ There will also be lots of repeated HTML and CSS because each page with its own 
   
 This project was a learning project, its aim was to expand my CSS and JS usage and create templates that can be used later.    
   
- #Features:  
+ # Features:  
 Css animations  
 form validation  
 sends emails from form  
@@ -15,7 +15,7 @@ JavaScript animations
 
 
    
-   #This project is not finished  
+   # This project is not finished  
    TODO:   
    Add a product page that can be dynamic for each individually visited product from the products page.  
    Maybe add a store feature.
