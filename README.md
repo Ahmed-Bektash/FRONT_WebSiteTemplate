@@ -18,4 +18,4 @@ JavaScript animations
    # This project is not finished  
    TODO:   
    Add a product page that can be dynamic for each individually visited product from the products page.  
-   Maybe add a store feature.
+
