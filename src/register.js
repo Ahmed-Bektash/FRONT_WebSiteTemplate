@@ -1,11 +1,11 @@
   // Your web app's Firebase configuration
   var firebaseConfig = {
-    apiKey: "AIzaSyDFspzj0cnNVMbKeFQOlGya3TNWYgcUE9I",
-    authDomain: "sampleprojecttemplate-1.firebaseapp.com",
+    apiKey: "Your API key",
+    authDomain: "your firebase app",
     projectId: "sampleprojecttemplate-1",
-    storageBucket: "sampleprojecttemplate-1.appspot.com",
-    messagingSenderId: "48686952941",
-    appId: "1:48686952941:web:5b1e0ba5c0918dfc4777e4"
+    storageBucket: "your storage bucket",
+    messagingSenderId: "your provided ID  here",
+    appId: "your provided app ID here"
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
@@ -48,10 +48,10 @@ form.addEventListener('submit', e => {
 function sendEmail(name,email,message){
     Email.send({
         Host : "smtp.gmail.com",
-        Username : "itsbektash@gmail.com",
-        Password : "pgmyclmozppwneef", //https://www.youtube.com/watch?v=i2eXkSKjl0A
-        To : `itsbektash@gmail.com`, //you can add the user email here for verification or any number of emails!
-        From : "itsbektash@gmail.com",
+        Username : "email for user in smtp",
+        Password : "provide password", //https://www.youtube.com/watch?v=i2eXkSKjl0A
+        To : `email to send to`, //you can add the user email here for verification or any number of emails!
+        From : "email to send from",
         Subject : `${name} sent you a message`,
         Body : `Name: ${name} <br/> Email: ${email} <br/> Message:${message}`,
     }).then(
