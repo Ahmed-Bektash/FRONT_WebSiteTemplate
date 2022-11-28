@@ -207,46 +207,37 @@
         }
     }
 
-    /************************************HERO************************************/
+/************************************HERO************************************/
 .main-container{
-    display: flex;
-    /* justify-content: center;
-    align-items: center; */
-    background-color: black;
-    height:100vh;
-    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-around;
+    background:linear-gradient(to bottom, rgba(0, 0, 0, 1) 11.2%, rgb(34, 33, 33) 78.9%);
+    /* height:90vh; */
 }
 
-.main-img{
-    /* background-color: black; */
-    height: 100%;
-    width: 96%;
-    position: absolute;
-    opacity:0.5;
-    z-index:1;
-    background:  url(./images/camera-lens.jpg) no-repeat fixed center;
-    background-size: cover;
-    transform: translateX(50px);
-    
+.main-img-container{
+    width:100%;
+    height: 80%;
+    text-align: center;
+}
 
+#main-img{
+    width: 100%;
+    max-width: 900px;
+    height: 95%;
+    padding: 5rem;
+    
 }
 
 .main-content{
     width:100%;
-    /* padding-left: 5rem; */
-    z-index: 50;
-    text-align: center;
+    padding-left: 5rem;
     align-self: center;
-    transform: translateY(-100px) ;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-    
     
 }
-
 .main-content h4, h3{
     background-color: var(--Yellow);
     background-image: linear-gradient(to right, #FFEA61 0%, var(--Yellow) 100%);
@@ -256,7 +247,6 @@
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
     margin-top: 1rem;
-    font-weight: bold;
 }
 .main-content h1{
     font-size: 3rem;
@@ -274,12 +264,12 @@
     margin-bottom: 1rem;
     font-size: 1.2rem;
     color:var(--Mint);
-    
+    font-weight: 500;
 }
 
 .main-btn{
     font-size: 1rem;
-    background-image: linear-gradient(to right, rgb(238, 190, 31) 0%, var(--Yellow) 100%);
+    background-image: linear-gradient(to top, rgb(238, 190, 31) 0%, var(--Yellow) 100%);
     padding: 15px 30px;
     border: none;
     border-radius: 5px;
@@ -289,9 +279,10 @@
     position: relative;
     transition: all 0.4s;
     outline:none; 
-    z-index: 2;
+    z-index: 3;
     color: black;
     text-decoration: none;
+    max-width: 100px;
 }
 
 /* .main-btn a{
@@ -299,7 +290,6 @@
     z-index: 2;
     color: black;
     text-decoration: none;
-    width:100%;
 } */
 
 .main-btn:after{
@@ -313,6 +303,7 @@
     transition: all 0.3s;
     border-radius: 5px;
     
+    
 }
 
 .main-btn:hover:after{
@@ -323,34 +314,10 @@
     
     @media screen and (max-width: 480px){
         
-        .main-container{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            /* justify-content: center; */
-            width: 100%;
-            /* margin: 0 auto; */
-            height: 90vh;
-            
-        }
-        .main-img{
-            /* background-color: black; */
-            height: 90%;
-            width: 100%;
-            position: absolute;
-            opacity:0.5;
-            z-index:1;
-            background:  url(./images/camera-lens.jpg) no-repeat fixed center;
-            background-size: cover;
-            z-index: 1;
-            transform: scaleX(1.1);
-            transform: scaley(1.1);
-
-        }
+        
         
         .main-content h2{
             font-size: 2rem;
-            transform: translateY(100px) ;
         }
         
         .main-content p{
@@ -365,249 +332,185 @@
         
         
         }
-    @media Screen and (max-width: 768px){
-    
-            .main{
-                display: flex;
-                flex-direction: column;
-                
-        
-            }
-            .main-container{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                /* justify-content: center; */
-                width: 100%;
-                height: 90vh;
-                
-            }
-
-             .main-img{
-                height: 90%;
-                width: 100%;
-                position: absolute;
-                opacity:0.5;
-                z-index:1;
-                background:  url(./images/camera-lens.jpg) no-repeat fixed center;
-                background-size: cover;
-                transform: translateX(0px);
-
-            }
-            
-            .main-content{
-                margin-top: 2rem;
-                text-align: left;
-                margin-bottom: 4rem;
-                margin-left: 0;
-                padding-left: 2rem;
-                z-index: 50;
-                transform: translateY(100px) ;
-                
-             
-                
-            }
-            
-           
-            .main-content h2{
-                font-size: 3rem;
-            }
-            
-            .main-content p{
-                margin-top: 1rem;
-                font-size:2rem;
-                font-weight: bold;
-            }
-
-           
-        
-            #main-img{
-                padding: 2rem;
-                
-            }
-        } 
-        
-        
-/***********************************PRODUCTS*****************************/
-.Products{
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); 
-    /* This repeats the columns by autofitting (auto-fill will not expand columns to scren size but will shrink down and wrap) to screen size and each column is a min of 240 px but max 1 fr*/
-    /* grid-template-columns: repeat(3,minmax(240px,1fr)); */
-    /*This does the same but repeats 3 times fixed so no wrap will happen*/
-    grid-auto-rows: 240px;
-    align-items: center;
-    padding: 2rem;
-    background-color: rgb(230, 228, 228);
+/*********************************TEAM***************************************/
+.team{
+    background: linear-gradient(to top, rgba(0, 0, 0, 1) 20%, rgb(34, 33, 33) 78.9%);
+    padding: 1rem;
+    display:grid;
+    grid-template-columns: 50% 50%;
+    gap: 1rem;
+}
+.card{
+    display: flex;
+    justify-content: space-around;
     /* background-color: black; */
-    /* height: 100vh; */
+    align-items: center;
+    border-radius: 15px;
+    height: 7rem;
+    margin: 1rem;
+    width: 90%
 }
 
-.product-card{
-background-color: var(--Yellow);
-height: 240px;
-width: 250px;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-align-self: center;
-border-radius: 16px;
-overflow: hidden;
+.card-active{
+    background-color: teal;
+    transition: background-color 0.4s ease-in-out;
 }
 
-/* .product-img{
+.person{
+    /* background-color: teal; */
     height: 100%;
+    /* border-radius: 10px; */
     width: 100%;
-    /* height: 320px; */
-    /* width:320px; */
-     /* transform: scaleY(0.7);  
-     /* transform: translateY(90px);  
-     transition: opacity 0.3s ease-in-out;
-     border-radius: 16px;
-} */
-
-
-.product{
-   transition: all 0.2s ease-out;
-   color: var(--Mint);
-   opacity: 0;
-  
-}
-.active h3{
-    padding-top: 0rem;
-    padding-bottom:1rem;
-}
-.active h4{
-    padding-bottom:1rem;
-}
-
-.active{
-    background-color: rgba(0, 0, 0, 0.75);
-    border-radius: 16px;
-    padding:1rem;
-    transition: all 0.3s ease-out;
-    z-index: 3;
-    width: 100%;
-    opacity:1;
-    text-align: center;
-}
-
-
-.product-img-container{
-    /* background: url(./images/watch.jpg) no-repeat center; */
-    /* background-size: cover; */
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    max-height: 240px;
-    max-width: 250px;
-    border-radius: 16px;
-    
-    
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    padding: 1rem;
+    margin: 1rem;
 
 }
 
-.prod-btn{
-    text-decoration: none;
-    text-align: center;
-    font-size: 1rem;
-    background-image: linear-gradient(to right, rgb(238, 190, 31) 0%, var(--Yellow) 100%);
-    padding: 10px 10px;
-    border: none;
-    border-radius: 5px;
-    color: black;
-    margin-top:0.5rem;
-    cursor: pointer;
+.person h3{
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+
+.person-active{
+    opacity: 0.9;
+    transition: opacity 0.4s ease-in-out;
+}
+.person-img-container{
+   
+    display:inline-block;
     position: relative;
-    outline:none; 
-    z-index: 2;
+    width: 6.5rem;
+    height: 6.5rem;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-left: 20px;
+    left:45%;
+    transition: left 0.4s ease-in;
+    
 }
 
-@media screen and (max-width: 768px){
+.img-active{
+    left:0;
+    transition: left 0.4s ease-in;
+}
+.person-img-container img{
+    width: 100%;
+    height:100%;
+    border-style: solid;
+    border-color: var(--Yellow);
+    border-radius: 50%;
+    /* z-index: 1; */
+}
+
+@media Screen and (max-width: 768px){
     
-   
-    .product-card{
-        min-height: 250px;
-        min-width: 300px;
+    .main{
+        display: flex;
+        flex-direction: column;
+
     }
-    .product-img-container{
-        max-width: 300px;
-        max-height: 250px; 
-        }
-         
-    /*IF YOU WANT TO MAKE IT A CARD*/
-    /* .product{
-        transition: all 0.3s ease-out;
-        color: var(--Mint);
-        opacity: 1;
-        background-color: var(--LightBlack);
-        border-radius: 16px;
-        padding:0.5rem;
-        transition: all 0.3s ease-out;
-        z-index: 3;
+    .main-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: center; */
         width: 100%;
-        transform: translateY(75px);
-        border-top-right-radius: 0px;
-        border-top-left-radius: 0px;
-        padding-top: 5px;
-     }
-      .product-img-container{
-        position: absolute;
+        /* margin: 0 auto; */
+        /* height: 90vh; */
+    }
+    
+    .main-content{
+        margin-top: 2rem;
+        text-align: left;
+        margin-bottom: 4rem;
+        margin-left: 0;
+        padding-left: 2rem;
+    }
+    
+    
+    .main-content h2{
+        font-size: 3rem;
+    }
+    
+    .main-content p{
+        margin-top: 1rem;
+        font-size:1.5rem;
+    }
+
+    #main-img{
+        padding: 2rem;
+    }
+
+    .team{
+        display:flex;
+        gap: 1rem;
+        flex-direction: column;
+    }
+   
+    .card{
+        display: flex;
+        justify-content: space-around;
+        background-color: teal;
+        align-items: center;
+        border-radius: 15px;
+        height: 100px;
+        margin: 1rem;
+    }
+    
+    /* .card-active{
+        background-color: teal;
+        transition: background-color 0.4s ease-in-out;
+    } */
+    
+    .person{
+        background-color: teal;
         height: 100%;
+        border-radius: 10px;
+        /* width: 100%; */
+        /* opacity: 0; */
+        /* transition: opacity 0.3s ease-in-out; */
+        padding: 1rem;
+        margin: 1rem;
+        opacity:1;
+        
+    
+    }
+    
+    .person-active{
+        opacity: 1;
+        /* transition: opacity 0.4s ease-in-out; */
+    }
+    .person-img-container{
+        
+        display:inline-block;
+        position: relative;
+        width: 100px;
+        height: 90px;
+        overflow: hidden;
+        border-radius: 50%;
+        /* margin-left: 20px; */
+        left:0;
+        /* transition: left 0.4s ease-in; */
+        
+    }
+    
+    /* .img-active{
+        left:0;
+        transition: left 0.4s ease-in;
+    } */
+    .person-img-container img{
         width: 100%;
-        max-height: 150px;
-        max-width: 300px;
-        border-radius: 0px;
-        border-top-right-radius: 16px;
-        border-top-left-radius: 16px;
-        transform: translateY(-50px);
+        height:100%;
+        border-style: solid;
+        border-color: var(--Yellow);
+        border-radius: 50%;
     
     }
-    .product h3{
-        padding-bottom:0.5rem;
-    }
-    .product h4{
-        padding-bottom:0.5rem;
-    }
-     */
-    
-     
-   
-   
 }
-@media screen and (max-width: 1500px){
-    .product-card{
-        min-height: 240px;
-        min-width: 250px;
-    }
-    .product-img-container{
-        max-width: 250px;
-        max-height: 240px; 
-        }
-    }
-@media screen and (max-width: 800px){
-    .product-card{
-        min-height: 250px;
-        min-width: 300px;
-    }
-    .product-img-container{
-        max-width: 300px;
-        max-height: 250px; 
-        }
-}
-@media screen and (max-width: 1200px){
-    .product-card{
-        min-height: 240px;
-        min-width: 250px;
-    }
-    .product-img-container{
-        max-width: 250px;
-        max-height: 240px; 
-        }
-}
-/*************************************FOOTER*****************************/
+
+/************************************FOOTER************************************/
     .footer{
         background: black;
         padding: 5rem 0;

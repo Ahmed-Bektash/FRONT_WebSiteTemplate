@@ -1,0 +1,20 @@
+{
+  "name": "FRONT_WebSiteTemplate",
+  "version": "1.0.0",
+  "description": "This is my first full website. It is done using only HTML,CSS and JS  \r This is a template i created so it will have lots of commented out code that would be a sub  \r There will also be lots of repeated HTML and CSS because each page with its own css can be used as a single page website later.",
+  "main": "about.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ahmed-Bektash/FRONT_WebSiteTemplate.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ahmed-Bektash/FRONT_WebSiteTemplate/issues"
+  },
+  "homepage": "https://github.com/Ahmed-Bektash/FRONT_WebSiteTemplate#readme"
+}
